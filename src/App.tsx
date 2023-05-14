@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Map from './page/Map'
+import Form from './page/Form'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='w-full h-[100vh] lg:p-20'>
+      <h1 className='font-bold text-green-700 text-2xl mb-4 text-left'>Weather Buddy</h1>
+      <div className='flex flex-col lg:row'>
+        <div className='lg:w-[30%] border lg:h-full w-[100%] h-[30vh] '>
+          <Form />
+        </div>
+        
+        <div className='lg:w-[70%] border lg:h-full w-[100%] h-[70vh]'>
+          <Map />
+        </div>
+        
+      </div>
     </div>
-  );
+  )
 }
-
-export default App;
