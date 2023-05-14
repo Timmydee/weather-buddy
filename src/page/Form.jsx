@@ -137,13 +137,13 @@ export default function Form() {
                   value={searchInput}
                   onChange={(e) => setSearchInput(e.target.value)}    
               />
-              <button className='h-12 bg-green-500 w-[20%]' type='submit' >Search</button>
+              <button className='h-12 bg-green-500 rounded hover:bg-green-700 w-[20%]' type='submit' >Search</button>
           </form>
 
-          <div className='flex flex-col max-h-[70vh] overflow-auto'>
+          <div className='flex flex-col lg:max-h-[74vh] max-h-[22vh] overflow-scroll'>
               {filterSearch.map((currentCity => {
                   return (
-                      <div onClick={() => handleClick(currentCity)} className='bg-yellow-700 w-[70%] h-10 mx-auto my-3 cursor-pointer'>
+                      <div onClick={() => handleClick(currentCity)} className='bg-yellow-600 hover:bg-yellow-800 w-[70%] h-20 rounded  mx-auto my-3 cursor-pointer'>
                           <h3 className='flex justify-center items-center text-white'>{currentCity.name}</h3>
                       </div>
                   )
@@ -151,7 +151,7 @@ export default function Form() {
           </div>
       </div>
 
-      <div className=''>
+      <div className='hidden'>
         <Weather />
       </div>
     </div>
