@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState, useContext } from "react";
 import { render } from "react-dom";
 import ReactMapGl, { Marker, Popup } from "react-map-gl";
+import Map from "react-map-gl";
 import WeatherContext from "../WeatherContext";
 import {GoLocation} from "react-icons/go"
 
@@ -18,7 +19,7 @@ function Maps () {
   });
 
   return (
-    <ReactMapGl
+    <Map
       {...viewState}
       onMove={evt => setViewState(evt.viewState)}
       mapboxAccessToken="pk.eyJ1IjoidGltbXlkZWUiLCJhIjoiY2xobWl0aWZ4MHhkMDNlb2RxeG84aWo3dSJ9.pVtGJuYn2_WIP8Xscnk5Jw"
@@ -50,7 +51,7 @@ function Maps () {
           
         </Popup>)
       }
-    </ReactMapGl>
+    </Map>
   );
 }
 
