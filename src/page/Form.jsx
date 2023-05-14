@@ -140,14 +140,14 @@ export default function Form() {
               <button className='h-12 bg-green-500 rounded hover:bg-green-700 w-[20%]' type='submit' >Search</button>
           </form>
 
-          <div className='flex flex-col lg:max-h-[74vh] max-h-[22vh] overflow-scroll'>
-              {filterSearch.map((currentCity => {
+          <div className='flex flex-col lg:max-h-[74vh] max-h-[22vh] pt-2 overflow-scroll'>
+              {filterSearch.map((currentCity, i) => {
                   return (
-                      <div onClick={() => handleClick(currentCity)} className='bg-yellow-600 hover:bg-yellow-800 w-[70%] h-20 rounded  mx-auto my-3 cursor-pointer'>
+                      <div key={i} onClick={() => handleClick(currentCity)} className='bg-yellow-600 hover:bg-yellow-800 w-[70%] h-20 rounded  mx-auto my-3 cursor-pointer'>
                           <h3 className='flex justify-center items-center text-white'>{currentCity.name}</h3>
                       </div>
                   )
-              }))}
+              })}
           </div>
       </div>
 

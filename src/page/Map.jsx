@@ -22,7 +22,7 @@ function Maps () {
     <Map
       {...viewState}
       onMove={evt => setViewState(evt.viewState)}
-      mapboxAccessToken="pk.eyJ1IjoidGltbXlkZWUiLCJhIjoiY2xobWl0aWZ4MHhkMDNlb2RxeG84aWo3dSJ9.pVtGJuYn2_WIP8Xscnk5Jw"
+      mapboxAccessToken={process.env.REACT_APP_MAPBOX}
       // style={{ width: "100%", height: "80vh" }}
       className="w-[100%] h-[60vh] lg:h-[80vh]"
       mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
