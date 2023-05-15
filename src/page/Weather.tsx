@@ -30,18 +30,6 @@ const Weather = () => {
         return <div>No weather available</div>
     }
 
-    const temps = weatherData.main?.temp
-    const hum = weatherData.main?.humidity
-
-//   return (
-//     <div>
-//         <div>
-//             <h2>Weather in {cityName}</h2>
-//             <p>Temperature {temps ? temps : 'N/A'}</p>
-//             <p>Humidity: {hum ? hum : 'N/A'}%</p>
-//         </div>
-//     </div>
-//   )
 }
 
 export default Weather
